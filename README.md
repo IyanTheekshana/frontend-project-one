@@ -1,3 +1,3 @@
 # NATOURS
 
-Float layout front-end project
+Float layout - front-end project
