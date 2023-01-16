@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width; //1140px
-  background-color: #eee;
   margin: 0 auto;
 
   &:not(:last-child) {
@@ -13,10 +12,7 @@
   // ^ means start with, * everything, $ ends with
 
   [class^="col-"] {
-    background-color: orangered;
     float: left;
-    color: $color-white;
-    font-size: 2rem;
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
