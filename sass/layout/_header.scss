@@ -11,7 +11,7 @@
   background-position: top;
   /* background-position: bottom;
     background-position: center; */
-
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-box {
