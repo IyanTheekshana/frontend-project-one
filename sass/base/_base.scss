@@ -9,8 +9,25 @@
 html {
   /* font-size: 10px; 10/16*100 */
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //9px: 9/16*100
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //8px: 8/16*100
+  }
+
+  @include respond(big-screen) {
+    font-size: 75%; //12px: 12/16*100
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
