@@ -26,13 +26,22 @@
     width: 15rem;
     height: 15rem;
     float: left;
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
 
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    transform: translateX(-3rem) skewX(12deg);
-    position: relative;
+    @supports (clip-path: circle(0 0)) or (-webkit-clip-path: circle(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
 
     @include respond(phone) {
       width: 11rem;
@@ -44,6 +53,7 @@
   &__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: all 0.5s;
   }
@@ -66,6 +76,7 @@
     text-transform: uppercase;
     opacity: 0;
     transition: all 0.5s;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
